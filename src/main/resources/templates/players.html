@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Players</title>
+    <title>Idols</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
     <link rel="stylesheet" href="/bootstrap.min.css" media="screen"/>
@@ -11,41 +11,41 @@
     <div class="page-header" id="banner">
         <div class="row">
             <div class="col-lg-8 col-md-7 col-sm-6">
-                <h1>Добавить игрока</h1>
+                <h1>Добавить</h1>
                 <form class="needs-validation" novalidate th:action="@{/players}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <select multiple class="form-control" name="clubIId" required>
                             <option th:each="club : ${clubs}"
                                     th:value="${club.clubId}"
-                                    th:text="${club.fullName}">Club</option>
+                                    th:text="${club.fullName}">Group</option>
                         </select>
-                        <div class="invalid-feedback">Выберите один клуб</div>
+                        <div class="invalid-feedback">Choose group</div>
                     </div>
                     <div class="form-group">
                         <label for="first_name">First Name</label>
                         <input type="text" class="form-control" id="first_name" name="firstName" required/>
-                        <div class="invalid-feedback">Введите имя игрока</div>
+                        <div class="invalid-feedback">Введите имя</div>
                     </div>
                     <div class="form-group">
                         <label for="last_name">Last Name</label>
                         <input type="text" class="form-control" id="last_name" name="lastName" required/>
-                        <div class="invalid-feedback">Введите фамилию игрока</div>
+                        <div class="invalid-feedback">Введите фамилию</div>
                     </div>
-                    <button type="submit" class="btn btn-default" id="submit">Добавить игрока</button>
+                    <button type="submit" class="btn btn-default" id="submit">Добавить</button>
                 </form>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 col-md-7 col-sm-6">
-                <h1>Игроки</h1>
+                <h1>Idoly</h1>
 
                 <table class="table table-striped table-hover">
                     <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Игрок</th>
-                        <th>Клуб</th>
-                        <th>Действие</th>
+                        <th>Idol</th>
+                        <th>Group</th>
+                        <th>Action</th>
                     </tr>
                     </thead>
                     <tbody>

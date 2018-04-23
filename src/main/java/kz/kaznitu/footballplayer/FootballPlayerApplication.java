@@ -20,15 +20,6 @@ public class FootballPlayerApplication implements CommandLineRunner {
 	@Override
 	public void run(String... strings) throws Exception{
 
-		Club club1 = new Club();
-		club1.setFullName("Manchester United");
-		club1.setLeague("Premier League");
 
-		Club club2 = new Club();
-		club2.setFullName("Liverpool");
-		club2.setLeague("Premier League");
-
-		clubRepository.save(club1);
-		clubRepository.save(club2);
 	}
 }
